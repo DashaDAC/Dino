@@ -1,3 +1,7 @@
 import webbrowser
+web_page = 'https://github.com/DashaDAC'
 
-webbrowser.open('https://github.com/DashaDAC', new=2)
+def web_open(web_page):
+    webbrowser.open(str(web_page), new=2)
+
+web_open(web_page)
