@@ -4,7 +4,6 @@ import psutil
 
 web_page = 'https://github.com/DashaDAC'
 app_page = "/snap/bin/atom"
-app_page = "atom"
 print(os.path.expandvars(app_page))
 
 def web_open(web_page):
