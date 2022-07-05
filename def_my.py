@@ -4,7 +4,7 @@ import psutil
 
 web_page = 'https://github.com/DashaDAC'
 app_page = "/snap/bin/atom"
-print(os.path.expandvars(app_page))
+print(os.path.basename(app_page))
 
 def web_open(web_page):
     webbrowser.open(web_page, new=2)
@@ -13,9 +13,9 @@ def app_open(app_page):
     os.system(app_page)
 
 def app_kill(app_page):
-    name_app = os.path.expandvars(app_page)
+    name_app = os.path.basename(app_page)
     for process in (process for process in psutil.process_iter() if process.name() == name_app):
         process.kill()
 #test
-app_open(app_page)
-web_open(web_page)
+app_kill(app_page)
+# web_open(web_page)
