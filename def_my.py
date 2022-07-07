@@ -36,4 +36,4 @@ def google_search(query, num, num_stop, flag):
 app_kill(app_page)
 search_page = google_search(query, num, num_stop, 2)
 print(search_page)
-web_open(web_page)
+web_open(web_page, 2)
